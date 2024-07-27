@@ -35,28 +35,28 @@
         macro_mainwindows: macro_mainwindows {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 0 &tog 0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
             label = "MACRO_MAINWINDOWS";
         };
 
         macro_osxmediamini: macro_osxmediamini {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &tog 4>;
+            bindings = <&bt BT_SEL 1 &to 4>;
             label = "MACRO_OSXMEDIAMINI";
         };
 
         macro_maclaptop: macro_maclaptop {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &tog 4>;
+            bindings = <&bt BT_SEL 2 &to 4>;
             label = "MACRO_MACLAPTOP";
         };
 
         macro_workwindows: macro_workwindows {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 4 &tog 0>;
+            bindings = <&bt BT_SEL 4 &to 0>;
             label = "MACRO_WORKWINDOWS";
         };
     };
