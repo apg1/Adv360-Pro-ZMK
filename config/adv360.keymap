@@ -32,32 +32,39 @@
     };
 
     macros {
-        macro_workwindows: macro_mainwindows {
+        macro_windows_bt1: macro_mainwindows {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1 &to 0>;
             label = "MACRO_MAINWINDOWS";
         };
 
-        macro_osxmediamini: macro_osxmediamini {
+        macro_osxmediamini_bt0: macro_osxmediamini {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 4>;
             label = "MACRO_OSXMEDIAMINI";
         };
 
-        macro_osx: macro_maclaptop {
+        macro_windows_bt2: macro_maclaptop {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 2 &to 4>;
+            bindings = <&bt BT_SEL 2 &to 0>;
             label = "MACRO_MACLAPTOP";
         };
 
-        macro_windows: macro_workwindows {
+        macro_windows_bt3: macro_workwindows {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 3 &to 0>;
             label = "MACRO_WORKWINDOWS";
+        };
+
+        macro_windows_bt4: macro_windows_bt4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 4 &to 0>;
+            label = "MACRO_WINDOWS_BT4";
         };
     };
 
@@ -96,11 +103,11 @@
 
         layer_mod {
             bindings = <
-&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &macro_osxmediamini  &macro_workwindows  &macro_osx  &macro_windows  &none  &none
-&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none                &none               &none       &none           &none  &none
-&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none                &none               &none       &none           &none  &none
-&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none                &none               &none       &none           &none  &none
-&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                              &bl BL_INC          &bl BL_DEC  &none           &none  &none
+&none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &none                                                  &trans                  &macro_osxmediamini_bt0  &macro_windows_bt1  &macro_windows_bt2  &macro_windows_bt3  &macro_windows_bt4  &none
+&none  &none         &none         &none         &none         &none         &bootloader                                            &bootloader             &none                    &none               &none               &none               &none               &none
+&none  &none         &none         &none         &none         &none         &none        &none  &none      &bt BT_CLR  &none       &rgb_ug RGB_MEFS_CMD 5  &none                    &none               &none               &none               &none               &none
+&none  &none         &none         &none         &macro_ver    &none                             &none      &none                                           &none                    &none               &none               &none               &none               &none
+&none  &none         &none         &none         &none                       &none        &none  &none      &none       &bl BL_TOG  &rgb_ug RGB_TOG                                  &bl BL_INC          &bl BL_DEC          &none               &none               &none
             >;
         };
 
